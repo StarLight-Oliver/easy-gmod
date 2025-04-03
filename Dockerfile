@@ -3,9 +3,7 @@ FROM cm2network/steamcmd:root
 
 # DO NOT OVERRIDE THESE
 ENV GMODID=4020 \
-	GMODDIR=/home/steam/garrysmod \
-	SERVERCFG=/home/steam/garrysmod/garrysmod/cfg/server.cfg \
-	MOUNTCFG=/home/steam/garrysmod/garrysmod/cfg/mount.cfg
+	GMODDIR=/home/steam/garrysmod 
 
 # Environment variables
 ENV HOSTNAME="A Garry's Mod Server" \
@@ -29,4 +27,4 @@ CMD ./easygmod.sh
 
 # Set up container
 EXPOSE 27015/udp 27005/udp
-VOLUME ${GMODDIR} ${CSSDIR} ${TF2DIR}
+VOLUME ${GMODDIR}
